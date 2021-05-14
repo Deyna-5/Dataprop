@@ -1,0 +1,27 @@
+<table class="table table-striped">
+       <thead>
+              <tr>
+                     <th scope="col">Foto</th>
+                     <th scope="col">Dirección</th>
+                     <th scope="col">Área(mt2)</th>
+                     <th scope="col">Nro. Habitaciones</th>
+                     <th scope="col">Nro. Baños</th>
+                     <th scope="col">Precio</th>
+                     <th colspan="2">Herramientas</th>
+              </tr>
+       </thead>
+       <tbody>
+              <% @user_properties.each do |property| %>
+              <tr>
+                     <td><%= image_tag(property.photo.variant(resize: "100x100").processed) if property.photo.attached? %></td>
+                     <td><%= property.direction %></td>
+                     <td><%= property.area %></td>
+                     <td><%= property.rooms %></td>
+                     <td><%= property.bathrooms %></td>
+                     <td><%= property.price %></td>
+                     <td><%= link_to "Editar", edit_property_path(property), class: "link-sessions" %></td>
+                     <td><%= link_to "Eliminar", property, method: :delete, data: {confirm: "¿Seguro desea eliminar esta propiedad?"}, class: "link-sessions" %></td>
+              </tr>
+              <%end%>
+       </tbody>
+</table>

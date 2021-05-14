@@ -1,29 +1,3 @@
-<h1>Estas en explore</h1>
+<h1 class="text-center my-5">Explora otras propiedades de la plataforma</h1>
 
-<table class="table">
-       <thead>
-              <tr>
-              <th scope="col">Foto</th>
-              <th scope="col">Dirección</th>
-              <th scope="col">Precio</th>
-              <th colsapn="2"></th>
-              </tr>
-       </thead>
-       <tbody>
-              <% @properties.each do |property| %>
-              <tr>   
-                     <td><%=  image_tag(property.photo.variant(resize: "100x100").processed) if property.photo.attached? %></td>
-                     <td><%= property.direction %></td>
-                     <td><%= property.price %></td>
-                     <td>
-                            <% pre_like = property.likes.find {|like| like.user_id == current_user.id} %>
-                            <% if pre_like %>
-                                   <%= link_to "Unlike", property_like_path(property, pre_like), method: :delete %>
-                            <% else  %>
-                                   <%= link_to "Like", property_likes_path(property), method: :post%>
-                            <%end%>  
-                     </td>
-              </tr>
-              <% end %>
-       </tbody>
-</table>
+<%= render "shared/card" %>

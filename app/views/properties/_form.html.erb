@@ -3,36 +3,36 @@
 
        <div class="field">
               <%= form.label :price, "Precio de la propiedad" %> <br>
-              <%= form.number_field :price %>
+              <%= form.number_field :price, class: "my-3 border" %>
        </div>
 
        <div class="field">
               <%= form.label :direction, "Dirección de la propiedad" %> <br>
-              <%= form.text_field :direction %>
+              <%= form.text_field :direction, class: "my-3 border" %>
        </div>
 
        <div class="field">
               <%= form.label :area, "Area en mt2 de la propiedad" %> <br>
-              <%= form.text_field :area %>
+              <%= form.text_field :area, class: "my-3 border" %>
        </div>
 
        <div class="field">
               <%= form.label :rooms, "Cantidad de habitaciones" %> <br>
-              <%= form.number_field :rooms %>
+              <%= form.number_field :rooms, class: "my-3 border" %>
        </div>
 
        <div class="field">
               <%= form.label :bathrooms, "Cantidad de baños" %> <br>
-              <%= form.number_field :bathrooms %>
+              <%= form.number_field :bathrooms, class: "my-3 border" %>
        </div>
 
        <div class="field">
               <%= form.label :photo, "Foto de la propiedad" %> <br>
-              <%= form.file_field :photo %>
+              <%= form.file_field :photo, class: "my-3" %>
        </div>
 
        <div class="field">
-              <%= form.submit "Ingresar" %>
+              <%= form.submit "Ingresar", class: "btn btn-light" %>
        </div>
 
 <% end %>

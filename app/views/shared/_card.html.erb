@@ -1,0 +1,35 @@
+<% if @properties.length < 1 %>
+       <div class="text-center my-5 py-5">
+              <h3>No hay publicaciones aún</h3>
+              <p>¡Sé el primero!</p>
+       </div>
+<%else%>
+       <div class="container">
+              <div class="row">
+              <% @properties.each do |property| %>
+                     <div class="col-lg-3 mx-lg-5 col-md-1">
+                            <div class="card text-center my-4">
+                                   <%=  image_tag(property.photo.variant(resize: "300x300").processed) if property.photo.attached? %>
+                                   <div class="card-body">
+                                          <h5 class="card-title">Informacion de la propiedad:</h5>
+                                          <p class="card-text">Dirección: <%= property.direction%></p>
+                                          <p class="card-text">Área(mt2): <%= property.area%></p>
+                                          <p class="card-text">Nro.Habitaciones: <%= property.rooms%></p>
+                                          <p class="card-text">Nro.baños: <%= property.bathrooms%></p>
+                                          <p class="card-text">Precio: <%= property.price%></p>
+                                          <p class="card-text">Cantidad de likes: <%= property.likes.count%></p>
+                                   </div>
+                                   <div class="card-footer text-left">
+                                          <% pre_like = property.likes.find {|like| like.user_id == current_user.id} %>
+                                          <% if pre_like %>
+                                                 <%= link_to "Unlike", property_like_path(property, pre_like), method: :delete, class: "btn btn-primary" %>
+                                          <% else  %>
+                                                 <%= link_to "Like", property_likes_path(property), method: :post, class: "btn btn-primary"%>
+                                          <%end%> 
+                                   </div>
+                            </div>
+                     </div>
+              <%end%>
+              </div>
+       </div>
+<% end %>
