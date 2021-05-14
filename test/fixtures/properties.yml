@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  direction: MyString
+  area: MyString
+  rooms: 1
+  bathrooms: 1
+  photo: MyString
+  user: one
+
+two:
+  price: 1
+  direction: MyString
+  area: MyString
+  rooms: 1
+  bathrooms: 1
+  photo: MyString
+  user: two
