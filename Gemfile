@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 #List of gems add during the creation of the project
 gem "devise"
+gem 'mini_magick', '~> 4.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record

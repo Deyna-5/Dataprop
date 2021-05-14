@@ -1,1 +1,24 @@
-<h1>Hola :)</h1>
+<% if user_signed_in? %>
+       <h1>Hola usuario logeado!</h1>
+
+       <h3>Listado de propiedades</h3>
+       <%= link_to "Añadir una nueva propiedad" %>
+       <table class="table">
+              <thead>
+                     <tr>
+                            <th scope="col">Foto</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Área(mt2)</th>
+                            <th scope="col">Nro. Habitaciones</th>
+                            <th scope="col">Nro. Baños</th>
+                            <th scope="col">Precio</th>
+                     </tr>
+              </thead>
+              <tbody>
+                     <tr>
+                     </tr>
+              </tbody>
+       </table>
+<% else %>
+       <h1>No pueder ver nada, no te haz logeado</h1>
+<%end %>
