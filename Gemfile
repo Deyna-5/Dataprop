@@ -4,8 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.3'
 
 #List of gems add during the creation of the project
+#Gem for login user
 gem "devise"
+#Gem for render and save images
 gem 'mini_magick', '~> 4.8'
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record

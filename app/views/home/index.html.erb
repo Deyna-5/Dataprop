@@ -1,6 +1,11 @@
 <% if user_signed_in? %>
        <h1>Hola usuario logeado!</h1>
-
+       <div>
+              <h4>Informacion general:</h4>
+              <p>Cantidad total de mis propiedades: <%= current_user.properties.count %></p>
+              <p>Cantidad de likes total recibido por mis propiedades: RECUERDA IMPLEMENTAR LIKES!!</p>
+              <p>Cantidad global de propiedades: <%= @properties.count %></p>
+       </div>
        <h3>Listado de propiedades</h3>
        <%= link_to "Añadir una nueva propiedad", new_property_path %>
        <table class="table">
@@ -16,7 +21,7 @@
                      </tr>
               </thead>
               <tbody>
-                     <% @properties.each do |property| %>
+                     <% @user_properties.each do |property| %>
                      <tr>
                             <td><%= image_tag(property.photo.variant(resize: "100x100").processed) %></td>
                             <td><%= property.direction %></td>

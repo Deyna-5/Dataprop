@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :properties, except: [:index, :show]
 
+  get "explore", to: "home#explore", as: "explore"
+
   root "home#index"
 end
