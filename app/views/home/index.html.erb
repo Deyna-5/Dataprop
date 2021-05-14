@@ -23,7 +23,7 @@
               <tbody>
                      <% @user_properties.each do |property| %>
                      <tr>
-                            <td><%= image_tag(property.photo.variant(resize: "100x100").processed) %></td>
+                            <td><%= image_tag(property.photo.variant(resize: "100x100").processed) if property.photo.attached? %></td>
                             <td><%= property.direction %></td>
                             <td><%= property.area %></td>
                             <td><%= property.rooms %></td>

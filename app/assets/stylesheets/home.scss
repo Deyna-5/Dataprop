@@ -1,0 +1,46 @@
+@mixin background-sessions($photo){
+       width: 100%;
+       height: 100%;
+       z-index: -200;
+       position: absolute;
+       background-image: $photo;
+       background-repeat: no-repeat;
+       left: 0px;
+       top: 0px;
+}
+
+#sessions{
+       @include background-sessions(url(https://focastock.com/wp-content/uploads/2020/03/P1080814.jpg))
+}
+#sessions-div{
+       border: 1px solid rgba(77, 77, 77, 0.5);
+       padding: 50px 30%;
+       border-radius: 15px;
+       background-color: rgba(77, 77, 77, 0.5);
+       margin: 100px 20px;
+}
+
+#registrations{
+       @include background-sessions(url(https://focastock.com/wp-content/uploads/2019/05/P1030042.jpg))
+}
+#registrations-div{
+       border: 1px solid rgba(77, 77, 77, 0.5);
+       padding: 30px 30%;
+       border-radius: 15px;
+       background-color: rgba(77, 77, 77, 0.5);
+       margin: 100px 20px;
+}
+
+
+
+
+
+.link-sessions{
+       color: black;
+       text-decoration: none;
+       font-weight: bold;
+              &:hover{
+                     color: black;
+                     text-shadow: 2px 2px 5px gainsboro;
+              }
+}
