@@ -1,1 +1,22 @@
 <h1>Estas en explore</h1>
+
+<table class="table">
+       <thead>
+              <tr>
+              <th scope="col">Foto</th>
+              <th scope="col">Dirección</th>
+              <th scope="col">Precio</th>
+              <th colsapn="2"></th>
+              </tr>
+       </thead>
+       <tbody>
+              <% @properties.each do |property| %>
+              <tr>   
+                     <td><%=  image_tag(property.photo.variant(resize: "100x100").processed)  %></td>
+                     <td><%= property.direction %></td>
+                     <td><%= property.price %></td>
+                     <td>Like</td>
+              </tr>
+              <% end %>
+       </tbody>
+</table>
