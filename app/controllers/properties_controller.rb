@@ -7,7 +7,7 @@ class PropertiesController < ApplicationController
 
        def create
               @property = Property.new(property_params)
-
+              @property.user_id = current_user.id
               if @property.save
                      redirect_to root_path, notice: "Propiedad agregada de forma éxitosa"
               else
@@ -19,21 +19,28 @@ class PropertiesController < ApplicationController
        end
 
        def update
-              if @property.update
-                     redirect_to root_path, notice: "Propiedad editada de forma éxitosa"
-              else
-                     render :edit, alert: "Ocurrió un error, intente nuevamente"
+              if @property.user_id = current_user.id
+                     if @property.update(property_params)
+                            redirect_to root_path, notice: "Propiedad editada de forma éxitosa"
+                     else
+                            render :edit, alert: "Ocurrió un error, intente nuevamente"
+                     end
               end
        end
 
        def destroy
-              @property.destroy
-              redirect_to root_path, notice: "La propiedad se borró de forma éxitosa"
+              if @property.user_id = current_user.id
+                     if @property.destroy
+                     redirect_to root_path, notice: "La propiedad se borró de forma éxitosa"
+                     else
+                     redirect_to root_path, notice: "Ocurrió un error"
+                     end
+              end
        end
 
        private
               def property_params
-                     property.permit(:price, :direction, :area, :rooms, :bathrooms, :photo, :user_id)
+                     params.require(:property).permit(:price, :direction, :area, :rooms, :bathrooms, :photo)
               end
 
               def set_property

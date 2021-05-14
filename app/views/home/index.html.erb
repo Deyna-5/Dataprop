@@ -2,7 +2,7 @@
        <h1>Hola usuario logeado!</h1>
 
        <h3>Listado de propiedades</h3>
-       <%= link_to "Añadir una nueva propiedad" %>
+       <%= link_to "Añadir una nueva propiedad", new_property_path %>
        <table class="table">
               <thead>
                      <tr>
@@ -12,11 +12,22 @@
                             <th scope="col">Nro. Habitaciones</th>
                             <th scope="col">Nro. Baños</th>
                             <th scope="col">Precio</th>
+                            <th colspan="3">Herramientas</th>
                      </tr>
               </thead>
               <tbody>
+                     <% @properties.each do |property| %>
                      <tr>
+                            <td><%= image_tag(property.photo.variant(resize: "100x100").processed) %></td>
+                            <td><%= property.direction %></td>
+                            <td><%= property.area %></td>
+                            <td><%= property.rooms %></td>
+                            <td><%= property.bathrooms %></td>
+                            <td><%= property.price %></td>
+                            <td><%= link_to "Editar propiedad", edit_property_path(property) %></td>
+                            <td><%= link_to "Eliminar propiedad", property, method: :delete, data: {confirm: "¿Seguro desea eliminar esta propiedad?"} %></td>
                      </tr>
+                     <%end%>
               </tbody>
        </table>
 <% else %>

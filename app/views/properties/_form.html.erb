@@ -1,39 +1,38 @@
-<h1>Agregar una nueva propiedad</h1>
 
-<%= form_with(model: property, local: true) do |form| %>
+<%= form_with(model: @property, local: true) do |form| %>
 
        <div class="field">
-              <%= form.label :price %>
+              <%= form.label :price, "Precio de la propiedad" %> <br>
               <%= form.number_field :price %>
        </div>
 
        <div class="field">
-              <%= form.label :direction %>
+              <%= form.label :direction, "Dirección de la propiedad" %> <br>
               <%= form.text_field :direction %>
        </div>
 
        <div class="field">
-              <%= form.label :area %>
+              <%= form.label :area, "Area en mt2 de la propiedad" %> <br>
               <%= form.text_field :area %>
        </div>
 
        <div class="field">
-              <%= form.label :rooms %>
+              <%= form.label :rooms, "Cantidad de habitaciones" %> <br>
               <%= form.number_field :rooms %>
        </div>
 
        <div class="field">
-              <%= form.label :bathrooms %>
+              <%= form.label :bathrooms, "Cantidad de baños" %> <br>
               <%= form.number_field :bathrooms %>
        </div>
 
        <div class="field">
-              <%= form.label :photo %>
+              <%= form.label :photo, "Foto de la propiedad" %> <br>
               <%= form.file_field :photo %>
        </div>
 
        <div class="field">
-       
+              <%= form.submit "Ingresar" %>
        </div>
 
 <% end %>

@@ -6,7 +6,6 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.string :area
       t.integer :rooms
       t.integer :bathrooms
-      t.string :photo
       t.references :user, foreign_key: true
 
       t.timestamps
