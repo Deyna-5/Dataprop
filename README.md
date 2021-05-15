@@ -27,3 +27,6 @@ Que cosas necesitas para instalar el software
 
 ### Link para la aplicacion de heroku:
 https://limitless-thicket-46532.herokuapp.com/
+
+### Extra:
+La aplicación no es responsive.
