@@ -24,7 +24,8 @@ Que cosas necesitas para instalar el software
 7. Visualizarlo en el browser a través de "http://localhost:3000/"
 
 ### Modelo Físico del proyecto:
-
+![Diagrama ER.](https://raw.githubusercontent.com/Deyna-5/Dataprop/master/Diagrama.png)
+https://github.com/
 ### Link para la aplicacion de heroku:
 https://limitless-thicket-46532.herokuapp.com/
 
