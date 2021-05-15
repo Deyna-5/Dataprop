@@ -25,7 +25,6 @@ Que cosas necesitas para instalar el software
 
 ### Modelo Físico del proyecto:
 ![Diagrama ER.](https://raw.githubusercontent.com/Deyna-5/Dataprop/master/Diagrama.png)
-https://github.com/
 ### Link para la aplicacion de heroku:
 https://limitless-thicket-46532.herokuapp.com/
 
