@@ -12,6 +12,8 @@
        </thead>
        <tbody>
               <% if @user_properties.length < 1 %>
+                     <h2 class="text-center">No tienes ninguna propiedad publicada</h2>
+              <% else %>
                      <% @user_properties.each do |property| %>
                      <tr>
                             <td><%= image_tag(property.photo.variant(resize: "100x100").processed) if property.photo.attached? %></td>
@@ -24,8 +26,6 @@
                             <td><%= link_to "Eliminar", property, method: :delete, data: {confirm: "¿Seguro desea eliminar esta propiedad?"}, class: "link-sessions" %></td>
                      </tr>
                      <%end%>
-              <% else %>
-                     <h2 class="text-center">No tienes ninguna propiedad publicada</h2>
               <% end %>
        </tbody>
 </table>

@@ -8,8 +8,10 @@ ruby '2.5.3'
 gem "devise"
 #Gem for render and save images
 gem 'mini_magick', '~> 4.8'
-
-
+# Gem for AWS
+gem "aws-sdk-s3"
+# Gem for ENV
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
