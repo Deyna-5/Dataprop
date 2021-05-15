@@ -7,6 +7,7 @@
                      <th scope="col">Nro. Habitaciones</th>
                      <th scope="col">Nro. Baños</th>
                      <th scope="col">Precio</th>
+                     <th scope="col">Likes</th>
                      <th colspan="2">Herramientas</th>
               </tr>
        </thead>
@@ -22,6 +23,7 @@
                             <td><%= property.rooms %></td>
                             <td><%= property.bathrooms %></td>
                             <td><%= property.price %></td>
+                            <td><%= property.likes.count %></td>
                             <td><%= link_to "Editar", edit_property_path(property), class: "link-sessions" %></td>
                             <td><%= link_to "Eliminar", property, method: :delete, data: {confirm: "¿Seguro desea eliminar esta propiedad?"}, class: "link-sessions" %></td>
                      </tr>
