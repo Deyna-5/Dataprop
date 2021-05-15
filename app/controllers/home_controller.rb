@@ -10,6 +10,7 @@ class HomeController < ApplicationController
 
        def explore
               @properties = Property.all.where.not(user_id: current_user.id)
+              @properties = Kaminari.paginate_array(@properties).page(params[:page]).per(9)
        end
 
 end

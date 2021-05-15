@@ -12,7 +12,10 @@ gem 'mini_magick', '~> 4.8'
 gem "aws-sdk-s3"
 # Gem for ENV
 gem 'dotenv-rails'
-
+# Gem Kaminari for pagination
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari'
+# Gem for populate database 
+gem "faker"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record

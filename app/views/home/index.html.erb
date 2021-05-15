@@ -1,15 +1,15 @@
+<h1 class="my-3">Bienvenido <%= current_user.name %></h1>
 
-       <h1 class="my-3">Bienvenido <%= current_user.name %></h1>
-       <div id="generalinfo" class="my-5">
-              <h4>Resumen:</h4>
-              <p>Cantidad total de mis propiedades: <%= current_user.properties.count %></p>
-              <p>Cantidad de likes total recibido por mis propiedades: HACER!</p>
-              <h4>Resumen general:</h4>
-              <p>Cantidad global de propiedades: <%= @properties.count %></p>
-       </div>
+<div id="generalinfo" class="my-5">
+       <h4>Resumen:</h4>
+       <p>Cantidad total de mis propiedades: <%= current_user.properties.count %></p>
+       <p>Cantidad de likes total recibido por mis propiedades: HACER!</p>
+       <h4>Resumen general:</h4>
+       <p>Cantidad global de propiedades: <%= @properties.count %></p>
+</div>
        
-       <div class="my-5">
-              <h3 class="text-center my-4">Listado de propiedades</h3>
-              <%= render "shared/table" %>
-              <%= link_to "Añadir una nueva propiedad", new_property_path, class: "btn btn-light" %>
-       </div>
+<div class="my-5">
+       <h3 class="text-center my-4">Listado de propiedades</h3>
+       <%= render "shared/table" %>
+       <%= link_to "Añadir una nueva propiedad", new_property_path, class: "btn btn-light" %>
+</div>

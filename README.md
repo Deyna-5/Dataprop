@@ -12,6 +12,8 @@ Que cosas necesitas para instalar el software
 * [Bootstrap v4.6 ](https://getbootstrap.com/)
 * [Minimagick 4.8](https://github.com/minimagick/minimagick)
 * [Ruby 2.5.3](https://www.ruby-lang.org/es/)
+* [Aws-sdk-s3](https://github.com/aws/aws-sdk-ruby)
+* [Dotenv](https://github.com/bkeepers/dotenv)
 * [Ruby on rails 5.2.6](https://rubyonrails.org/)
 
 ## Instalación 🔧
